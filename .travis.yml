@@ -10,7 +10,7 @@ script: npm run build
 deploy: 
   provider: pages
   skip_cleanup: true
-  github_token: $GH_TOKEN
+  github_token: $GH_TOKENq
 
 on:
   branch: master
