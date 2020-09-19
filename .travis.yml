@@ -25,15 +25,15 @@ deploy:
     on:
       branch: master
 
-    - provider: codedeploy
-      access_key_id: $AWS_ACCESS_KEY
-      secret_access_key: $AWS_SECRET_KEY
-      bucket: myganada-build-s3
-      key: myganada-webservice.zip
-      bundle_typ: zip
-      deployment_group: myganada-webservice-group
-      application: myganada-webservice
-      region: us-east-2
-      wait-until-deployed: true
-      on:
-        branch: master
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: myganada-build-s3
+    key: myganada-webservice.zip
+    bundle_typ: zip
+    deployment_group: myganada-webservice-group
+    application: myganada-webservice
+    region: us-east-2
+    wait-until-deployed: true
+    on:
+      branch: master
