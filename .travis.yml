@@ -8,10 +8,13 @@ cache: npm
 script: npm run build
 
 before_deploy:
-  - rm -rf node_modules
-  - zip -r myganada-webservice.zip ./*
-  - mkdir -p deploy
-  - mv myganada-webservice.zip deploy/myganada-webservice.zip
+  - mkdir -p before-deploy
+  - cp deploy/*.sh before-deploy/
+  - cp appspec.yml before-deploy/
+  - cp -r dist/ before-deploy/
+  - cd before-deploy && zip -r before-deploy *
+  - cd ../ && mkdir -p deploy
+  - mv before-deploy/before-deploy.zip deploy/myganada-webservie.zip
 
 deploy:
   - provider: s3
