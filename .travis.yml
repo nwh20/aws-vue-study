@@ -8,7 +8,7 @@ cache: npm
 script: npm run build
 
 before_deploy:
-  - re -rf node_modules
+  - rm -rf node_modules
   - zip -r myganada-webservice.zip ./*
   - mkdir -p deploy
   - mv myganada-webservice.zip deploy/myganada-webservice.zip
