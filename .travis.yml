@@ -32,7 +32,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: myganada-build-s3
-    key: myganada-webservice.zip
+    key: myganada-webservie.zip
     bundle_type: zip
     deployment_group: myganada-webservice-group
     application: myganada-webservice
