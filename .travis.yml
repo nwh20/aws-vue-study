@@ -14,7 +14,7 @@ before_deploy:
   - cp -r dist/ before-deploy/
   - cd before-deploy && zip -r before-deploy *
   - cd ../ && mkdir -p deploy
-  - mv before-deploy/before-deploy.zip deploy/myganada-webservie.zip
+  - mv before-deploy/before-deploy.zip deploy/myganada-webservice.zip
 
 deploy:
   - provider: s3
@@ -32,7 +32,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
     bucket: myganada-build-s3
-    key: myganada-webservie.zip
+    key: myganada-webservice.zip
     bundle_type: zip
     deployment_group: myganada-webservice-group
     application: myganada-webservice
