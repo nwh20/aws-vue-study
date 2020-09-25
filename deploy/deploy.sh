@@ -1,6 +1,6 @@
-#!/bing/bash
+#!/bin/bash
 
-FR_DIR=/user/share/nginx/html
+FR_DIR=/usr/share/nginx/html 
 REP_DIR=/home/ec2-user/app/step2/zip/dist
 
 echo "> FR_DIR File Del *"
